@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>JFoundation</name>
+	<creationDate>2014-02-05</creationDate>
+	<author>René Kreijveld</author>
+	<authorEmail>email@renekreijveld.nl</authorEmail>
+	<authorUrl>www.jfoundation.net</authorUrl>
+	<copyright>(C) 2014 JFoundation</copyright>
+	<license><license>GNU General Public License version 2 or later; see LICENSE.txt</license></license>
+	<version>1.0.0</version>
+	<description> 
+	<![CDATA[
+		  <h1>JFoundation base template</h1>
+		  <h2>Foundation 5.1.0 based Joomla 3.x template</h4>
+	]]>
+	</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>parameters.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>headstart</position>
+		<position>headfinish</position>
+		<position>bodystart</position>
+		<position>bodyfinish</position>
+		<position>contentstart</position>
+		<position>contentfinish</position>
+		<position>topbarmenu</position>
+	</positions>
+
+<config>
+
+	<fields name="params">
+ 
+		<fieldset name="basic">
+			<field name="cssloading" type="radio" class="btn-group" default="0" 
+				label="CSS Loading" 
+				description="How should we load CSS">
+				<option value="0">Load normal CSS</option>
+				<option value="1">Load minified CSS</option>
+				<option value="2">Load CSS merged (minified and merged into 1 file)</option>
+			</field>
+			<field name="modernizr" type="radio" class="btn-group" default="0" 
+				label="Modernizr" 
+				description="Enable JavaScript modernizr.js in head">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="normalize" type="radio" class="btn-group" default="1" 
+				label="Normalize" 
+				description="Load Normalize CSS reset">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fontawesome" type="radio" class="btn-group" default="0" 
+				label="Font Awesome" 
+				description="Enable Font Awesome for better icons in the template">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="nocaption" type="radio" class="btn-group" default="1" 
+				label="Remove Caption" 
+				description="Remove JCaption scripts from head">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="removecore" type="radio" class="btn-group" default="1" 
+				label="Remove Core scripts" 
+				description="Remove Core scripts from head (/media/jui/js/jquery.min.js etc.)">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="generator" type="text" class="span5" label="Generator tag" description="Insert generator tag here" default=""></field>
+			<field name="copyright" type="text" class="span5" label="Copyright" description="Insert copyright owner here" default=""></field>
+		</fieldset>
+
+		<fieldset name="javascripts" label="Foundation javascripts">
+			<field name="ffound" type="radio" class="btn-group" default="1" 
+				label="Foundation javascript" 
+				description="Load Foundation basic javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fabide" type="radio" class="btn-group" default="0" 
+				label="Abide" 
+				description="Load Abide javascript (form validation library">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="faccordion" type="radio" class="btn-group" default="0" 
+				label="Accordion" 
+				description="Load Accordion javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="falert" type="radio" class="btn-group" default="0" 
+				label="Alert" 
+				description="Load Alert javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fclearing" type="radio" class="btn-group" default="0" 
+				label="Clearing Lightbox" 
+				description="Load Clearing Lightbox javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fdropdown" type="radio" class="btn-group" default="0" 
+				label="Dropdown" 
+				description="Load Dropdown javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fequalizer" type="radio" class="btn-group" default="0" 
+				label="Equalizer" 
+				description="Load Equalizer javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="finterchange" type="radio" class="btn-group" default="0" 
+				label="Interchange" 
+				description="Load Interchange javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fjoyride" type="radio" class="btn-group" default="0" 
+				label="Joyride" 
+				description="Load Joyride javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="fmagellan" type="radio" class="btn-group" default="0" 
+				label="Magellan" 
+				description="Load Magellan javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="foffcanvas" type="radio" class="btn-group" default="0" 
+				label="Offcanvas" 
+				description="Load Offcanvas Navigation javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="forbit" type="radio" class="btn-group" default="0" 
+				label="Orbit" 
+				description="Load Orbit Slider javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="freveal" type="radio" class="btn-group" default="0" 
+				label="Reveal" 
+				description="Load Reveal Modals javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="ftab" type="radio" class="btn-group" default="0" 
+				label="Tabs" 
+				description="Load Tabs javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="ftooltip" type="radio" class="btn-group" default="0" 
+				label="Tooltips" 
+				description="Load Tooltips javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="ftopbar" type="radio" class="btn-group" default="0" 
+				label="Topbar" 
+				description="Load Topbar javascript">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="social_media" label="Social media">
+			<field name="twitter" type="text" class="span5" label="Twitter" description="Insert URL here." default=""></field>
+			<field name="facebook" type="text" class="span5" label="Facebook" description="Insert URL here." default=""></field>
+			<field name="flickr" type="text" class="span5" label="Flickr" description="Insert URL here." default=""></field>
+			<field name="linkedin" type="text" class="span5" label="Linked in" description="Insert URL here." default=""></field>
+			<field name="youtube" type="text" class="span5" label="YouTube" description="Insert URL here." default=""></field>
+			<field name="vimeo" type="text" class="span5" label="Vimeo" description="Insert URL here." default=""></field>
+			<field name="pinterest" type="text" class="span5" label="Pinterest" description="Insert URL here." default=""></field>
+			<field name="google" type="text" class="span5" label="Google+" description="Insert URL here." default=""></field>
+			<field name="instagram" type="text" class="span5" label="Instagram" description="Insert URL here." default=""></field>
+		</fieldset>
+
+		<fieldset name="analytics_code" label="Google Analytics Code">
+			<field name="analytics" type="text" default="UA-XXXXXXXX-Y" label="Google Analytics Code:" description="Enter your Google Analytics Code here" filter="raw" />
+		</fieldset>
+
+	</fields>
+
+</config>
+
+</extension>
